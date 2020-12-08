@@ -40,11 +40,11 @@ gem 'jquery-rails'
 
 gem 'uglifier'
 
-gem 'pg'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '11.1.3', platforms: [:mri, :mingw, :x64_mingw]
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '1.4.2' 
 end
 
 group :development do
@@ -62,6 +62,10 @@ group :test do
   gem 'selenium-webdriver', '3.142.7'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers', '4.3.0'
+end
+
+group :production do
+  gem 'pg', '1.2.3'
 end
 
 
